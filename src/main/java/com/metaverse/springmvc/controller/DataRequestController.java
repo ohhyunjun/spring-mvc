@@ -39,4 +39,10 @@ public class DataRequestController {
     public String helloRequestModel(@ModelAttribute Star star) {
         return String.format("Hello, @ModelAttribute으로 받은 값들 Post요청, <br> name = %s, age = %d", star.getName(), star.getAge());
     }
+
+    @GetMapping("/form/param/model")
+    @ResponseBody
+    public String helloRequestModelGet(@ModelAttribute Star star) {
+        return String.format("Hello, @ModelAttribute으로 받은 값들 Post요청, <br> name = %s, age = %d", star.getName(), star.getAge());
+    }
 }
